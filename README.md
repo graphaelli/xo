@@ -187,11 +187,8 @@ $ mkdir -p templates
 # copy xo templates for postgres
 $ cp "$GOPATH/src/github.com/knq/xo/templates/*" templates/
 
-# remove xo binary data
-$ rm templates/*.go
-
 # edit base postgres templates
-$ vi templates/postgres.*.tpl.go
+$ vi templates/postgres.*.go.tpl
 
 # use with xo
 $ xo pgsql://user:pass@host/db -o models --template-path templates
